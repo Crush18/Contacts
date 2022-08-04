@@ -18,6 +18,7 @@ public class Contacts implements Serializable {
 
     public void addRecord() {
         System.out.print("Enter the type (person, organization): ");
+        Scanner scanner = new Scanner(System.in);
         String type = scanner.nextLine();
 
         Record record = "person".equals(type) ? new Person() : new Organization();
@@ -70,6 +71,7 @@ public class Contacts implements Serializable {
 
     public ArrayList<Record> searchRecords() {
         System.out.print("Enter search query: ");
+        Scanner scanner = new Scanner(System.in);
         String query = "(?i).*" + scanner.nextLine() + ".*";
         Pattern pattern = Pattern.compile(query);
         ArrayList <Record> searchResult = new ArrayList<>();

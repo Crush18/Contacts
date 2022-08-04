@@ -68,6 +68,7 @@ public class Main {
                         } else {
                             currentState.setCurrentRecord(phoneBook.records.get(Integer.parseInt(action) - 1));
                         }
+//                        currentState.setCurrentRecord(currentState.searchList.get(Integer.parseInt(action) - 1));
                         currentState.setCurrentState("record");
                         currentState.getCurrentRecord().printInfo();
                     }
